@@ -102,17 +102,15 @@ GameStat/
 
 ### Homepage
 
-![GameStat Homepage](./ss1.png)
+![GameStat Homepage](./public/ss1.png)
 
 ### Player Search
 
-![Player Search](./ss2.png)
+![Player Search](./public/ss2.png)
 
-### Player Profile
+### Result
 
-![Player Profile](./ss3.png)
-
----
+![Player Found](./public/ss3.png)
 
 ## ⚙️ Running Locally
 
