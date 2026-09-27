@@ -46,7 +46,7 @@ async def test():
 @app.get("/player")
 async def get_player(tag : str):
     encoded_tag = quote(tag,safe="")
-    url = f"https://api.clashofclans.com/v1/players/{encoded_tag}"
+    url = f"https://cocproxy.royaleapi.dev/v1/players/{encoded_tag}"
     headers = {
         "Authorization": f"Bearer {api_key}"
     }
