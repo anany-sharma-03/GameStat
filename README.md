@@ -91,7 +91,7 @@ This project was built as a practical learning project to understand **React, RE
 
 ---
 
-🛠️ Tech Stack
+## 🛠️ Tech Stack
 Frontend
 React
 Vite
@@ -111,7 +111,7 @@ GitHub
 
 ---
 
-📁 Project Structure
+## 📁 Project Structure
 GameStat/
 │
 ├── Backend/
@@ -152,7 +152,7 @@ GameStat/
 
 ---
 
-🔄 How It Works
+## 🔄 How It Works
 The user enters a Clash of Clans player tag.
 React sends the player tag to the FastAPI backend.
 FastAPI sends an authenticated request to the Clash of Clans API through the RoyaleAPI proxy.
@@ -164,7 +164,7 @@ The player statistics are displayed using the PlayerCard component.
 ---
 
 
-🔐 Environment Variables
+## 🔐 Environment Variables
 
 The Clash of Clans API key is stored as an environment variable.
 
@@ -178,7 +178,7 @@ For production, the API key is stored securely as an environment variable in Ren
 
 ---
 
-⚙️ Run Locally
+## ⚙️ Run Locally
 1. Clone the repository
 git clone https://github.com/anany-sharma-03/GameStat.git
 cd GameStat
@@ -188,11 +188,7 @@ npm install
 cd Backend
 pip install -r requirements.txt
 4. Add your API key
-
----
-
 Create:
-
 Backend/.env
 
 and add:
@@ -219,7 +215,7 @@ http://localhost:5173
 
 ---
 
-📚 What I Learned
+## 📚 What I Learned
 
 This project helped me learn and practice:
 
@@ -246,18 +242,18 @@ Git and GitHub
 Frontend-backend communication
 Deploying a React application
 Deploying a FastAPI backend
-Debugging production CORS issues
-🚀 Deployment
+Debugging production CORS issues 
+Deployment
 
 ---
 
-The application is deployed using Render.
+## The application is deployed using Render.
 
-Frontend
+## Frontend
 
 https://gamestat.onrender.com
 
-Backend
+## Backend
 
 https://gamestat-backend.onrender.com
 
@@ -271,9 +267,9 @@ Completed ✅
 
 GameStat was built as a practical project for learning React, FastAPI, REST APIs, frontend-backend communication, and deployment.
 
-👨‍💻 Author
-
 ---
+
+## 👨‍💻 Author
 
 Anany Sharma
 
