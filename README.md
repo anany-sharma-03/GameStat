@@ -1,100 +1,36 @@
 # 🎮 GameStat
 
-GameStat is a full-stack web application that lets users search for a Clash of Clans player and view their profile statistics.
+GameStat is a full-stack web application that allows users to search for Clash of Clans players and view their profile statistics.
 
-This project was built as a learning project to practice **React, REST APIs, FastAPI, and frontend-backend communication**.
-
----
-
-## 🚀 Features
-
-- 🔎 Search Clash of Clans players by player tag
-- 🏆 Display player statistics
-- 🏰 Show Town Hall and player level
-- ⚔️ Show attack and defense wins
-- 🛡️ Show clan information
-- ⏳ Loading state while fetching player data
-- ❌ Player-not-found handling
-- 🎬 Clash of Clans video background
-- 📱 Responsive design for desktop and mobile
+This project was built as a practical learning project to understand **React, REST APIs, FastAPI, frontend-backend communication, Git/GitHub, and deployment**.
 
 ---
 
-## 🛠️ Tech Stack
+## 🌐 Live Demo
 
 ### Frontend
 
-- React
-- Vite
-- CSS
+👉 https://gamestat.onrender.com
 
-### Backend
+### Backend API
 
-- Python
-- FastAPI
-- HTTPX
-
-### External API
-
-- Clash of Clans API
+👉 https://gamestat-backend.onrender.com
 
 ---
 
-## 🏗️ Architecture
+## ✨ Features
 
-```text
-React Frontend
-      │
-      │ Player Tag
-      ▼
-FastAPI Backend
-      │
-      │ Authenticated API Request
-      ▼
-Clash of Clans API
-      │
-      │ Player Data
-      ▼
-FastAPI
-      │
-      │ Cleaned Response
-      ▼
-React Player Card
-```
-
-````
-
----
-
-## 📁 Project Structure
-
-```text
-GameStat/
-│
-├── Backend/
-│   ├── main.py
-│   ├── .env
-│   └── .gitignore
-│
-├── public/
-│   └── coc-bg.mp4
-│
-├── src/
-│   ├── Components/
-│   │   ├── Navbar/
-│   │   ├── PlayerCard/
-│   │   └── SearchBox/
-│   │
-│   ├── App.jsx
-│   └── index.css
-│
-├── ss1.png
-├── ss2.png
-├── ss3.png
-├── README.md
-├── package.json
-└── vite.config.js
-```
+- 🔎 Search Clash of Clans players by player tag
+- 🏆 Display player trophies
+- 🏰 Display Town Hall level
+- 📊 Display player experience level
+- ⚔️ Display attack wins
+- 🛡️ Display defense wins
+- 👑 Display clan information
+- ⏳ Loading state while searching
+- ❌ Error handling for invalid players
+- 🎬 Clash of Clans themed video background
+- 📱 Responsive design for desktop and mobile
 
 ---
 
@@ -102,137 +38,222 @@ GameStat/
 
 ### Homepage
 
-![GameStat Homepage](./public/ss1.png)
+<img src="https://raw.githubusercontent.com/anany-sharma-03/GameStat/main/public/ss1.png" alt="GameStat Homepage" width="800">
 
 ### Player Search
 
-![Player Search](./public/ss2.png)
+<img src="https://raw.githubusercontent.com/anany-sharma-03/GameStat/main/public/ss2.png" alt="GameStat Player Search" width="800">
 
-### Result
+### Player Profile
 
-![Player Found](./public/ss3.png)
-
-## ⚙️ Running Locally
-
-### 1. Clone the repository
-
-```bash
-git clone <your-repository-url>
-cd GameStat
-```
-
-### 2. Install frontend dependencies
-
-```bash
-npm install
-```
-
-### 3. Set up the backend
-
-Navigate to the backend:
-
-```bash
-cd Backend
-```
-
-Install the required Python packages:
-
-```bash
-pip install fastapi uvicorn httpx python-dotenv
-```
-
-Create a `.env` file inside the `Backend` folder:
-
-```env
-CLASH_API_KEY=your_api_key_here
-```
-
-### 4. Start the FastAPI server
-
-From the `Backend` folder:
-
-```bash
-uvicorn main:app --reload
-```
-
-The backend will run on:
-
-```text
-http://127.0.0.1:8000
-```
-
-### 5. Start the React frontend
-
-Open another terminal in the project root:
-
-```bash
-npm run dev
-```
-
-The frontend will normally run on:
-
-```text
-http://localhost:5173
-```
+<img src="https://raw.githubusercontent.com/anany-sharma-03/GameStat/main/public/ss3.png" alt="GameStat Player Profile" width="800">
 
 ---
 
-## 🔐 Environment Variables
+## 🏗️ Architecture
 
-The backend requires a Clash of Clans API key.
+```text
+                    ┌─────────────────────┐
+                    │   React Frontend    │
+                    │      Vite + CSS     │
+                    └──────────┬──────────┘
+                               │
+                               │ HTTP Request
+                               ▼
+                    ┌─────────────────────┐
+                    │   FastAPI Backend   │
+                    │       Python        │
+                    └──────────┬──────────┘
+                               │
+                               │ Authenticated Request
+                               ▼
+                    ┌─────────────────────┐
+                    │  RoyaleAPI Proxy    │
+                    └──────────┬──────────┘
+                               │
+                               ▼
+                    ┌─────────────────────┐
+                    │ Clash of Clans API  │
+                    └──────────┬──────────┘
+                               │
+                               │ Player Data
+                               ▼
+                    ┌─────────────────────┐
+                    │   FastAPI Backend   │
+                    │  Data Transformation│
+                    └──────────┬──────────┘
+                               │
+                               ▼
+                    ┌─────────────────────┐
+                    │    Player Card      │
+                    │      React UI       │
+                    └─────────────────────┘
+🛠️ Tech Stack
+Frontend
+React
+Vite
+JavaScript
+CSS
+Backend
+Python
+FastAPI
+HTTPX
+python-dotenv
+External API
+Clash of Clans API
+RoyaleAPI Proxy
+Deployment
+Render
+GitHub
+📁 Project Structure
+GameStat/
+│
+├── Backend/
+│   ├── main.py
+│   ├── requirements.txt
+│   └── .gitignore
+│
+├── public/
+│   ├── coc-bg.mp4
+│   ├── ss1.png
+│   ├── ss2.png
+│   └── ss3.png
+│
+├── src/
+│   ├── Components/
+│   │   ├── Navbar/
+│   │   │   ├── Navbar.jsx
+│   │   │   └── Navbar.css
+│   │   │
+│   │   ├── PlayerCard/
+│   │   │   ├── PlayerCard.jsx
+│   │   │   └── PlayerCard.css
+│   │   │
+│   │   └── SearchBox/
+│   │       ├── SearchBox.jsx
+│   │       └── SearchBox.css
+│   │
+│   ├── App.jsx
+│   ├── App.css
+│   ├── index.css
+│   └── main.jsx
+│
+├── .gitignore
+├── README.md
+├── package.json
+├── package-lock.json
+└── vite.config.js
+
+
+🔄 How It Works
+The user enters a Clash of Clans player tag.
+React sends the player tag to the FastAPI backend.
+FastAPI sends an authenticated request to the Clash of Clans API through the RoyaleAPI proxy.
+The backend receives the player's data.
+FastAPI transforms the API response into the fields required by the frontend.
+React receives the response.
+The player statistics are displayed using the PlayerCard component.
+🔐 Environment Variables
+
+The Clash of Clans API key is stored as an environment variable.
+
+Create a .env file inside the Backend directory:
+
+CLASH_API_KEY=your_api_key_here
+
+The API key is not stored in the GitHub repository.
+
+For production, the API key is stored securely as an environment variable in Render.
+
+⚙️ Run Locally
+1. Clone the repository
+git clone https://github.com/anany-sharma-03/GameStat.git
+cd GameStat
+2. Install frontend dependencies
+npm install
+3. Install backend dependencies
+cd Backend
+pip install -r requirements.txt
+4. Add your API key
 
 Create:
 
-```text
 Backend/.env
-```
 
 and add:
 
-```env
 CLASH_API_KEY=your_api_key_here
-```
+5. Start the FastAPI backend
 
----
+From the Backend directory:
 
-## 📚 What I Learned
+uvicorn main:app --reload
 
-This project helped me practice:
+The backend will run at:
 
-- React components and props
-- React state with `useState`
-- Controlled form inputs
-- Conditional rendering
-- API requests using `fetch`
-- Loading and error states
-- REST API concepts
-- FastAPI endpoints
-- Query parameters
-- CORS
-- HTTP requests with HTTPX
-- Environment variables
-- API authentication
-- JSON response transformation
-- Responsive CSS
-- Git and GitHub
+http://127.0.0.1:8000
+6. Start the React frontend
 
----
+Open another terminal in the project root:
 
-## 🎯 Project Status
+npm run dev
 
-**Completed ✅**
+The frontend will normally run at:
 
-GameStat was created primarily as a learning project for understanding how a React frontend communicates with a Python backend and an external API.
+http://localhost:5173
+📚 What I Learned
 
----
+This project helped me learn and practice:
 
-## 👨‍💻 Author
+React components
+JSX
+Props
+useState
+Controlled form inputs
+Conditional rendering
+Event handling
+API requests using fetch
+Promises and async/await
+HTTP and REST APIs
+JSON
+FastAPI
+Query parameters
+HTTPX
+CORS
+API authentication
+Environment variables
+API response transformation
+Responsive CSS
+Git and GitHub
+Frontend-backend communication
+Deploying a React application
+Deploying a FastAPI backend
+Debugging production CORS issues
+🚀 Deployment
 
-**Anany Sharma**
+The application is deployed using Render.
+
+Frontend
+
+https://gamestat.onrender.com
+
+Backend
+
+https://gamestat-backend.onrender.com
+
+The frontend communicates with the deployed FastAPI backend instead of the local development server.
+
+🎯 Project Status
+
+Completed ✅
+
+GameStat was built as a practical project for learning React, FastAPI, REST APIs, frontend-backend communication, and deployment.
+
+👨‍💻 Author
+
+Anany Sharma
 
 Built while learning React, FastAPI, APIs, and full-stack development.
 
+⭐ Thanks for checking out GameStat!
 ```
-
-```
-````
