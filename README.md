@@ -52,7 +52,7 @@ This project was built as a practical learning project to understand **React, RE
 
 ## 🏗️ Architecture
 
-```text
+
                     ┌─────────────────────┐
                     │   React Frontend    │
                     │      Vite + CSS     │
